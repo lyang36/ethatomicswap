@@ -83,7 +83,7 @@ contract AtomicSwap {
 
     function participate(uint _refundTime, bytes20 _hashedSecret,address _initiator) 
         payable 
-        isNotInitiated(_hashedSecret)
+        isInitiator(_hashedSecret)
     {
         swaps[_hashedSecret].refundTime = _refundTime;
 	    swaps[_hashedSecret].initTimestamp = block.timestamp;
